@@ -7,9 +7,7 @@ public class Shop {
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
 
-
         Shop.delete(products, 1);
-
 
     }
 
