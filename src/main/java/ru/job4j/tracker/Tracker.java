@@ -58,18 +58,23 @@ public class Tracker {
         return rsl;
     }
 
-    public Item replace(String id, Item item){
+    public boolean replace(String id, Item item){
         int index = indexOf(id);
+        if(index == -1){
+            System.out.println("Can't find this index");
+            return false;
+        }
         Item itemToReplace = findById(id);
         String oldId = itemToReplace.getId();
         item.setId(oldId);
         items[index] = item;
-        return item;
+        return true;
     }
 
     public boolean delete(String id) {
         int index = indexOf(id);
         if(index == -1){
+            System.out.println("Can't find this index");
             return false;
         }
         items[index] = null;
