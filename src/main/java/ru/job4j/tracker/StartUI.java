@@ -38,14 +38,11 @@ public class StartUI {
                     break;
                 default:
                     System.out.println("No such command");
-
             }
-
-
         }
     }
 
-    private static void showMenu() {
+    public static void showMenu() {
         System.out.println("Menu.");
         System.out.println("0. Add new Item");
         System.out.println("1. Show all items");
@@ -59,14 +56,14 @@ public class StartUI {
     }
 
 
-    private static void createItem(Input input, Tracker tracker){
+    public static void createItem(Input input, Tracker tracker){
         System.out.println("=== Create a new Item ====");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
         tracker.add(item);
     }
 
-    private static void showAllItems(Tracker tracker){
+    public static void showAllItems(Tracker tracker){
         Item[] items = tracker.findAll();
         int idx = 0;
         for (Item item: items
@@ -74,7 +71,7 @@ public class StartUI {
             System.out.println(idx++ + ". " + item.getId() + " : " + item.getName());
         }
     }
-    private static void editItem(Input input, Tracker tracker){
+    public static void editItem(Input input, Tracker tracker){
         String id = input.askStr("Enter item id to edit");
         Item item = tracker.findById(id);
         String newName = input.askStr("Enter new name");
@@ -87,7 +84,7 @@ public class StartUI {
         };
 
     }
-    private static void deleteItem(Input input, Tracker tracker){
+    public static void deleteItem(Input input, Tracker tracker){
         String id = input.askStr("Enter item id to delete");
         if(tracker.delete(id)){
             System.out.println("Successfully deleted");
@@ -97,7 +94,7 @@ public class StartUI {
         };
 
     }
-    private static void findItemById(Input input, Tracker tracker){
+    public static void findItemById(Input input, Tracker tracker){
         System.out.println();
         String id = input.askStr("Enter item id to find");
         Item item = tracker.findById(id);
@@ -107,7 +104,7 @@ public class StartUI {
             System.out.println("Not found");
         }
     }
-    private static void findItemsByName(Input input, Tracker tracker){
+    public static void findItemsByName(Input input, Tracker tracker){
         String name = input.askStr("Enter item name to find");
         Item item = tracker.findByName(name);
         if(item != null){
