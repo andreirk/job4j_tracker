@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class ShowAllActionTest {
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void whenCheckOutput() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream def = System.out;
