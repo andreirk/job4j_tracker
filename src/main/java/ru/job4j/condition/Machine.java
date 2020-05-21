@@ -12,11 +12,10 @@ public class Machine {
         int moneyToChange = money - price;
         int reminder;
         int numberOfCoins;
-        boolean run = true;
         byte indexInCoinsList = 0;
         byte currentIndexInResult = 0;
 
-        while (run) {
+        while (moneyToChange > 0) {
             int currentCoinNominal = COINS[indexInCoinsList];
             reminder = moneyToChange % currentCoinNominal;
             numberOfCoins = moneyToChange / currentCoinNominal;
@@ -28,9 +27,7 @@ public class Machine {
                 size++;
             }
             System.out.println("reminder - " + reminder);
-            if (reminder < 1 || indexInCoinsList >= COINS.length - 1) {
-                run = false;
-            }
+
             moneyToChange = reminder;
             indexInCoinsList++;
         }
