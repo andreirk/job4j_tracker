@@ -28,6 +28,8 @@ public class AttachmentSort {
                 return left.getName().compareTo(right.getName());
             }
         };
+        attachments.sort(nameComparator);
+        System.out.println(attachments);
         // Здесь создайте компаратор на основании анонимного класса.
     }
 }
