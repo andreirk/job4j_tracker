@@ -11,14 +11,14 @@ public class StringCompare implements Comparator<String> {
         int smallest = leftLenght < rightLength ? leftLenght : rightLength;
 
         for (int i = 0; i < smallest; i++) {
-            if(left.charAt(i) > right.charAt(i)){
+            if (left.charAt(i) > right.charAt(i)) {
                 return 1;
-            } else if (left.charAt(i) < right.charAt(i)){
+            } else if (left.charAt(i) < right.charAt(i)) {
                 return -1;
             }
         }
 
-        if(rsl == 0 && leftLenght < rightLength){
+        if (rsl == 0 && leftLenght < rightLength) {
             rsl = -1;
         }
 

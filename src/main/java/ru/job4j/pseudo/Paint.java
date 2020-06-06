@@ -10,7 +10,7 @@ public class Paint {
         painter.draw(triangle);
     }
 
-    public void draw(Shape shape){
+    public void draw(Shape shape) {
         System.out.println(shape.draw());
     }
 

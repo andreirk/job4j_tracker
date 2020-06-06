@@ -25,24 +25,27 @@ public class Tracker {
         // Если индекс найден возвращаем item, иначе null
         return index != -1 ? items.get(index) : null;
     }
+
     public Item findByName(String name) {
         Item rsl = null;
         for (Item item : items) {
-            if(item.getName() == name){
+            if (item.getName() == name) {
                 rsl = item;
             }
         }
 
         return rsl;
     }
-    public Item[] findAll(){
+
+    public Item[] findAll() {
         return this.items.toArray(Item[]::new);
     }
+
     private int indexOf(String id) {
         int rsl = -1;
         int index = 0;
         for (Item item : items) {
-            if(item.getId() == id){
+            if (item.getId() == id) {
                 rsl = index;
             }
             index++;
@@ -50,9 +53,9 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean replace(String id, Item item){
+    public boolean replace(String id, Item item) {
         int index = indexOf(id);
-        if(index == -1){
+        if (index == -1) {
             System.out.println("Can't find this index");
             return false;
         }
@@ -65,6 +68,6 @@ public class Tracker {
 
     public boolean delete(String id) {
         boolean removed = items.remove(id);
-        return  removed;
+        return removed;
     }
 }

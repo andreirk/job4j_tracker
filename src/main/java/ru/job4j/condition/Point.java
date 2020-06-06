@@ -32,7 +32,7 @@ public class Point {
     }
 
     public double distance3d(Point point2, Point point3) {
-        return sqrt(pow(point2.x - this.x, 2) + pow(point2.y - this.y, 2) + (point3.z - this.z) );
+        return sqrt(pow(point2.x - this.x, 2) + pow(point2.y - this.y, 2) + (point3.z - this.z));
     }
 
     public static void main(String[] args) {

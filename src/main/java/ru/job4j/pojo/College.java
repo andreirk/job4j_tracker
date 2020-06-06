@@ -5,8 +5,9 @@ import java.util.Date;
 public class College {
 
     public static int numberOfStudents = 10;
+
     public static void main(String[] args) {
-        for(int i = 0; i < College.numberOfStudents; i++){
+        for (int i = 0; i < College.numberOfStudents; i++) {
             Student student = new Student();
             String name = "Name" + i;
             String sname = "Family" + i;

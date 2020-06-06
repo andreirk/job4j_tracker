@@ -3,12 +3,12 @@ package ru.job4j.ex;
 public class FindEl {
     public static int indexOf(String[] value, String key) throws ElementNotFoundException {
         int rsl = -1;
-        for (int i = 0; i < value.length; i++){
-            if(value[i].equals(key)){
+        for (int i = 0; i < value.length; i++) {
+            if (value[i].equals(key)) {
                 rsl = i;
             }
         }
-        if(rsl == -1){
+        if (rsl == -1) {
             throw new ElementNotFoundException("Not found");
         }
         // for-each
@@ -16,11 +16,11 @@ public class FindEl {
     }
 
     public static void main(String[] args) {
-        String[] newArr = {"some", "another" };
+        String[] newArr = {"some", "another"};
         try {
             int result = indexOf(newArr, "soyme");
             System.out.println("REsult is " + result);
-        } catch (ElementNotFoundException ex){
+        } catch (ElementNotFoundException ex) {
             ex.printStackTrace();
         }
 

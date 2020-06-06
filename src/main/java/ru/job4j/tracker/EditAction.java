@@ -12,7 +12,7 @@ public class EditAction implements UserAction {
         Item item = tracker.findById(id);
         String newName = input.askStr("Enter new name");
         item.setName(newName);
-        if(tracker.replace(id, item)){
+        if (tracker.replace(id, item)) {
             System.out.println("Successfully edited");
             return true;
         } else {

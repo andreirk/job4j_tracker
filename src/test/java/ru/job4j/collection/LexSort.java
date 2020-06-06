@@ -13,13 +13,13 @@ public class LexSort implements Comparator<String> {
 
         String leftStringToParse = "";
         int indexInLeft = 0;
-        while (!leftArr[indexInLeft].equals(".")){
+        while (!leftArr[indexInLeft].equals(".")) {
             leftStringToParse += leftArr[indexInLeft];
             indexInLeft++;
         }
         String rightStringToParse = "";
         int indexInRight = 0;
-        while (!rightArr[indexInRight].equals(".")){
+        while (!rightArr[indexInRight].equals(".")) {
             rightStringToParse += rightArr[indexInRight];
             indexInRight++;
         }
@@ -27,6 +27,6 @@ public class LexSort implements Comparator<String> {
 
         int intRight = Integer.parseInt(rightStringToParse);
         int intLeft = Integer.parseInt(leftStringToParse);
-        return  Integer.compare(intLeft, intRight);
+        return Integer.compare(intLeft, intRight);
     }
 }

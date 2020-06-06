@@ -11,6 +11,7 @@ public class ItemsSorter {
             return o1.getName().compareTo(o2.getName());
         }
     }
+
     static class SortByNameAsc implements Comparator<Item> {
 
         @Override
@@ -19,10 +20,11 @@ public class ItemsSorter {
         }
     }
 
-    public static SortByNameDesc sortByNameDesc(){
+    public static SortByNameDesc sortByNameDesc() {
         return new SortByNameDesc();
     }
-    public static SortByNameAsc sortByNameAsc(){
+
+    public static SortByNameAsc sortByNameAsc() {
         return new SortByNameAsc();
     }
 }

@@ -3,7 +3,7 @@ package ru.job4j.condition;
 import java.util.Arrays;
 
 public class Machine {
-    private final int[] COINS = {10, 5, 2, 1};
+    private final int[] coins = {10, 5, 2, 1};
 
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
@@ -16,13 +16,13 @@ public class Machine {
         byte currentIndexInResult = 0;
 
         while (moneyToChange > 0) {
-            int currentCoinNominal = COINS[indexInCoinsList];
+            int currentCoinNominal = coins[indexInCoinsList];
             reminder = moneyToChange % currentCoinNominal;
             numberOfCoins = moneyToChange / currentCoinNominal;
             System.out.printf("Number of coins:%s is:%s and reminder is %s", currentCoinNominal, numberOfCoins, reminder);
             for (int i = 0; i < numberOfCoins; i++) {
                 rsl[currentIndexInResult] = currentCoinNominal;
-               // System.out.printf("Coin %s: %s \n", i, rsl[currentIndexInResult]);
+                // System.out.printf("Coin %s: %s \n", i, rsl[currentIndexInResult]);
                 currentIndexInResult++;
                 size++;
             }
