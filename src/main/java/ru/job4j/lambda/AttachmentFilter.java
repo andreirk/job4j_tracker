@@ -1,6 +1,7 @@
 package ru.job4j.lambda;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -38,6 +39,10 @@ public class AttachmentFilter {
 
         return filter(list, func);
     }
+
+    Comparator<String> cmpText = (left, right) ->  left.compareTo(right);
+
+    Comparator<String> cmpDescSize = (left, right) ->  Integer.valueOf( left.length()).compareTo(Integer.valueOf(right));
 
 
 }
