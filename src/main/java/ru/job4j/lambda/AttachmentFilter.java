@@ -33,16 +33,16 @@ public class AttachmentFilter {
         Predicate<Attachment> func = new Predicate<Attachment>() {
             @Override
             public boolean test(Attachment attachment) {
-                    return attachment.getName().contains("bug");
+                return attachment.getName().contains("bug");
             }
         };
 
         return filter(list, func);
     }
 
-    Comparator<String> cmpText = (left, right) ->  left.compareTo(right);
+    Comparator<String> cmpText = (left, right) -> left.compareTo(right);
 
-    Comparator<String> cmpDescSize = (left, right) ->  Integer.valueOf( left.length()).compareTo(Integer.valueOf(right));
+    Comparator<String> cmpDescSize = (left, right) -> Integer.valueOf(left.length()).compareTo(Integer.valueOf(right.length()));
 
 
 }
