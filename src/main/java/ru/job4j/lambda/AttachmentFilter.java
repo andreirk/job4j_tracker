@@ -40,9 +40,15 @@ public class AttachmentFilter {
         return filter(list, func);
     }
 
-    Comparator<String> cmpText = (left, right) -> left.compareTo(right);
+    Comparator<String> cmpText = (left, right) -> {
+        System.out.printf("compare left text: %s to right text: $s", left.length(), right.length());
+        return left.compareTo(right);
+    };
 
-    Comparator<String> cmpDescSize = (left, right) -> Integer.valueOf(left.length()).compareTo(Integer.valueOf(right.length()));
+    Comparator<String> cmpDescSize = (left, right) ->  {
+        System.out.printf("compare left length %s to right length $s", left.length(), right.length());
+        return Integer.valueOf(left.length()).compareTo(Integer.valueOf(right.length()));
+    };
 
 
 }
