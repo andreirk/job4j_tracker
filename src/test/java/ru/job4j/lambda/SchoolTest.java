@@ -29,7 +29,7 @@ public class SchoolTest {
 
     @Test
     public void whenFilterToClassA() {
-        List<Student> result = School.collect(students, (s) -> s.getScore() > 70);
+        List<Student> result = School.collect(students, (s) -> s.getScore() >= 70);
         result.stream().map(s -> s.getSurname()).forEach(System.out::println);
         assertThat(result, containsInAnyOrder(
                 new Student("Bobrov", 80),
