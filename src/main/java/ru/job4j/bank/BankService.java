@@ -23,13 +23,14 @@ public class BankService {
         }
     }
 
-    public User findByPassport(String passport) {
+    public Optional<User> findByPassport(String passport) {
+        Optional<User> rsl = Optional.empty();
         for (User user : users.keySet()) {
             if (user.getPassport().equals(passport)) {
-                return user;
+                rsl = Optional.of(user);
             }
         }
-        return null;
+        return rsl;
     }
 
     public Account findByRequisite(String passport, String requisite) {
