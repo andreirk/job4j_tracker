@@ -1,6 +1,8 @@
 package ru.job4j.lambda;
 
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Student {
 
@@ -9,6 +11,9 @@ public class Student {
 
     public void setSurname(String surname) {
         this.surname = surname;
+
+
+
     }
 
     public int getScore() {
